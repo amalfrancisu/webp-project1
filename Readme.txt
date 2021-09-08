@@ -1,4 +1,5 @@
 Thanks for downloading this template!
+Welcome
 
 Template Name: Mentor
 Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
