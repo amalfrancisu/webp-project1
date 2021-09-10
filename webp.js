@@ -195,7 +195,7 @@ const webpCourses = {
                         trainerName: "freeCodeCamp.org",
                         users: "26",
                         hearts: "67",
-                        courseImg: "assets/img/course-1.jpg",
+                        courseImg: "assets/img/jslong1.jpg",
                         trainerImg: "assets/img/trainers/trainer-1.jpg",
                         studyMaterials: "https://examupdates.in/web-programming-notes/"
                   },
@@ -207,7 +207,7 @@ const webpCourses = {
                         trainerName: "Edureka",
                         users: "65",
                         hearts: "122",
-                        courseImg: "assets/img/course-2.jpg",
+                        courseImg: "assets/img/jslong2.jpg",
                         trainerImg: "assets/img/trainers/trainer-2.jpg",
                         studyMaterials: "https://examupdates.in/web-programming-notes/"
                   },
@@ -219,7 +219,7 @@ const webpCourses = {
                         trainerName: "Telusko",
                         users: "10",
                         hearts: "25",
-                        courseImg: "assets/img/course-3.jpg",
+                        courseImg: "assets/img/jslong3.png",
                         trainerImg: "assets/img/trainers/trainer-3.jpg",
                         studyMaterials: "https://examupdates.in/web-programming-notes/"
                   }
@@ -235,7 +235,7 @@ const webpCourses = {
                         trainerName: "Fireship",
                         users: "50",
                         hearts: "65",
-                        courseImg: "assets/img/course-2.jpg",
+                        courseImg: "assets/img/jsshort1.png",
                         trainerImg: "assets/img/trainers/trainer-2.jpg",
                         studyMaterials: "https://examupdates.in/web-programming-notes/"
                   },
@@ -250,7 +250,7 @@ const webpCourses = {
                         trainerName: "KnifeCircus",
                         users: "56",
                         hearts: "95",
-                        courseImg: "assets/img/course-3.jpg",
+                        courseImg: "assets/img/jsmini1.jpg",
                         trainerImg: "assets/img/trainers/trainer-3.jpg",
                         studyMaterials: "https://examupdates.in/web-programming-notes/"
                   },
@@ -262,8 +262,8 @@ const webpCourses = {
                         trainerName: "Aaron Jack",
                         users: "35",
                         hearts: "42",
-                        courseImg: "assets/img/course-1.jpg",
-                        trainerImg: "assets/img/trainers/trainer-1.jpg",
+                        courseImg: "assets/img/jsmini2.png",
+                        trainerImg: "assets/img/trainers/trainer-5.jpg",
                         studyMaterials: "https://examupdates.in/web-programming-notes/"
                   },
             }
@@ -281,8 +281,8 @@ const webpCourses = {
                         trainerName: "Telusko",
                         users: "126",
                         hearts: "67",
-                        courseImg: "assets/img/course-1.jpg",
-                        trainerImg: "assets/img/trainers/trainer-2.jpg",
+                        courseImg: "assets/img/javalong1.jpg",
+                        trainerImg: "assets/img/trainers/trainer-1.jpg",
                         studyMaterials: "https://www.w3schools.com/java/"
                   },
 
@@ -298,7 +298,7 @@ const webpCourses = {
                     trainerName: "IntelliJ IDEA by JetBrains",
                     users: "226",
                     hearts: "67",
-                    courseImg: "assets/img/course-1.jpg",
+                    courseImg: "assets/img/javashort1.png",
                     trainerImg: "assets/img/trainers/trainer-2.jpg",
                     studyMaterials: "https://www.w3schools.com/java/"
               },
@@ -310,8 +310,8 @@ const webpCourses = {
                     trainerName: "Edureka",
                     users: "65",
                     hearts: "122",
-                    courseImg: "assets/img/course-2.jpg",
-                    trainerImg: "assets/img/trainers/trainer-2.jpg",
+                    courseImg: "assets/img/javashort2.png",
+                    trainerImg: "assets/img/trainers/trainer-3.jpg",
                     studyMaterials: "https://www.javatpoint.com/java-tutorial"
               }
             },
@@ -325,8 +325,8 @@ const webpCourses = {
                       trainerName: "Alex Lee",
                       users: "156",
                       hearts: "95",
-                      courseImg: "assets/img/course-2.jpg",
-                      trainerImg: "assets/img/trainers/trainer-3.jpg",
+                      courseImg: "assets/img/javamini1.png",
+                      trainerImg: "assets/img/trainers/trainer-4.jpg",
                       studyMaterials: "https://www.javatpoint.com/java-tutorial"
                 },
 
@@ -345,8 +345,8 @@ const webpCourses = {
                         trainerName: "Traversy Media",
                         users: "2326",
                         hearts: "627",
-                        courseImg: "assets/img/course-1.jpg",
-                        trainerImg: "assets/img/trainers/trainer-4.jpg",
+                        courseImg: "assets/img/ajaxlong1.jpg",
+                        trainerImg: "assets/img/trainers/trainer-5.jpg",
                         studyMaterials: "https://www.w3schools.com/xml/ajax_intro.asp"
                   }
 
@@ -361,8 +361,8 @@ const webpCourses = {
                   trainerName: "LearnWebCode",
                   users: "226",
                   hearts: "67",
-                  courseImg: "assets/img/course-1.jpg",
-                  trainerImg: "assets/img/trainers/trainer-2.jpg",
+                  courseImg: "assets/img/ajaxshort1.jpg",
+                  trainerImg: "assets/img/trainers/trainer-6.jpg",
                   studyMaterials: "https://www.w3schools.com/xml/ajax_intro.asp"
             },
 
@@ -377,21 +377,21 @@ const webpCourses = {
                       trainerName: "Code School",
                       users: "256",
                       hearts: "95",
-                      courseImg: "assets/img/course-2.jpg",
-                      trainerImg: "assets/img/trainers/trainer-3.jpg",
+                      courseImg: "assets/img/ajaxmini1.jpg",
+                      trainerImg: "assets/img/trainers/trainer-7.jpg",
                       studyMaterials: "https://www.tutorialspoint.com/ajax/index.htm"
                 },
                 "2": {
-                      courseName: "Learn Javascript",
-                      courseDuration: "5 Min",
-                      courseDescription: "Easy Javascript sum-up",
-                      courseLink: "https://www.youtube.com/watch?v=c-I5S_zTwAc",
-                      trainerName: "Aaron Jack",
-                      users: "35",
-                      hearts: "42",
-                      courseImg: "assets/img/course-1.jpg",
-                      trainerImg: "assets/img/trainers/trainer-1.jpg",
-                      studyMaterials: "https://examupdates.in/web-programming-notes/"
+                      courseName: "Learn Ajax in 15 mins with examples",
+                      courseDuration: "17 Min",
+                      courseDescription: "In this video I will explain you what is Ajax, Types of Ajax, Ajax Disadvantages and Ajax Examples.",
+                      courseLink: "https://www.youtube.com/watch?v=5MmEUWfuZFk",
+                      trainerName: "Programming with Vishal",
+                      users: "135",
+                      hearts: "22",
+                      courseImg: "assets/img/ajaxmini2.jpg",
+                      trainerImg: "assets/img/trainers/trainer-8.jpg",
+                      studyMaterials: "https://www.tutorialspoint.com/ajax/index.html"
                 },
             }
 
@@ -399,30 +399,42 @@ const webpCourses = {
       "6": {
             categoryName: "PYTHON",
             "Full Courses": {
-                  count: 2,
+                  count: 3,
                   "1": {
-                        courseName: "Python Main Course",
-                        courseDuration: "3 Hours",
-                        courseDescription: "Javascript course specially designed for beginners which covers all the basics",
-                        courseLink: "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-                        trainerName: "freeCodeCamp.org",
-                        users: "26",
+                        courseName: "Python Tutorial - Python for Beginners [Full Course",
+                        courseDuration: "6 Hours",
+                        courseDescription: "Python tutorial - Python for beginners - Go from Zero to Hero with Python (includes machine learning & web development project).",
+                        courseLink: "https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=335s",
+                        trainerName: "Programming with Mosh",
+                        users: "236",
                         hearts: "67",
-                        courseImg: "assets/img/course-1.jpg",
+                        courseImg: "assets/img/pythonlong1.jpg",
                         trainerImg: "assets/img/trainers/trainer-1.jpg",
-                        studyMaterials: "https://examupdates.in/web-programming-notes/"
+                        studyMaterials: "https://docs.python.org/3/tutorial/"
                   },
                   "2": {
-                        courseName: "Javascript Training",
-                        courseDuration: "4 Hours",
-                        courseDescription: "Get a certified training on javascript to boost your career",
-                        courseLink: "https://www.youtube.com/watch?v=o1IaduQICO0",
-                        trainerName: "Edureka",
-                        users: "65",
+                        courseName: "Python Tutorial For Beginners In Hindi (With Notes) ",
+                        courseDuration: "11 Hours",
+                        courseDescription: "Learn Python One Video in Hindi: This Python Programming in Hindi tutorial is a complete python course in Hindi comprising of 13 Python chapters and 3 Python Projects. After watching this course you can learn Python programming easily in Hindi.",
+                        courseLink: "https://www.youtube.com/watch?v=gfDE2a7MKjA",
+                        trainerName: "CodeWithHarry",
+                        users: "625",
                         hearts: "122",
-                        courseImg: "assets/img/course-2.jpg",
-                        trainerImg: "assets/img/trainers/trainer-2.jpg",
-                        studyMaterials: "https://examupdates.in/web-programming-notes/"
+                        courseImg: "assets/img/pythonlong2.jpg",
+                        trainerImg: "assets/img/trainers/trainer-4.jpg",
+                        studyMaterials: "https://www.tutorialspoint.com/python/index.htm"
+                  },
+                  "3": {
+                        courseName: "Python Full Course - Learn Python in 12 Hours ",
+                        courseDuration: "12 Hours",
+                        courseDescription: "Get a certified training on python to boost your career",
+                        courseLink: "https://www.youtube.com/watch?v=WGJJIrtnfpk",
+                        trainerName: "Edureka",
+                        users: "655",
+                        hearts: "122",
+                        courseImg: "assets/img/pythonlong3.jpg",
+                        trainerImg: "assets/img/trainers/trainer-5.jpg",
+                        studyMaterials: "https://www.w3schools.com/python/"
                   },
 
 
@@ -430,44 +442,32 @@ const webpCourses = {
             "Short Courses": {
                 count: 1,
                 "1": {
-                      courseName: "JS Frameworks",
-                      courseDuration: "20 Min",
-                      courseDescription: "Comparison of all Javascript Frameworks",
-                      courseLink: "https://www.youtube.com/watch?v=cuHDQhDhvPE",
+                      courseName: "15 Minute Python Tutorial For Beginners In Hindi",
+                      courseDuration: "18 Min",
+                      courseDescription: "Get a certified training on python to boost your career",
+                      courseLink: "https://www.youtube.com/watch?v=fr1f84rg4Nw",
                       trainerName: "Fireship",
-                      users: "50",
+                      users: "150",
                       hearts: "65",
-                      courseImg: "assets/img/course-2.jpg",
-                      trainerImg: "assets/img/trainers/trainer-2.jpg",
-                      studyMaterials: "https://examupdates.in/web-programming-notes/"
+                      courseImg: "assets/img/pythonshort1.png",
+                      trainerImg: "assets/img/trainers/trainer-6.jpg",
+                      studyMaterials: "https://docs.python.org/3/tutorial/"
                 },
             },
             "Mini Courses": {
-                count: 2,
+                count: 1,
                 "1": {
-                      courseName: "Easy Javascript Game",
-                      courseDuration: "8 Min",
-                      courseDescription: "Develop a quick and easy game",
-                      courseLink: "https://www.youtube.com/watch?v=bG2BmmYr9NQ",
-                      trainerName: "KnifeCircus",
-                      users: "56",
+                      courseName: "Learn PYTHON in 5 MINUTES",
+                      courseDuration: "6 Min",
+                      courseDescription: "In this video we'll be learning as much Python as we can in 5 minutes. (Well six actually ...)",
+                      courseLink: "https://www.youtube.com/watch?v=I2wURDqiXdM",
+                      trainerName: "howCode",
+                      users: "356",
                       hearts: "95",
-                      courseImg: "assets/img/course-3.jpg",
-                      trainerImg: "assets/img/trainers/trainer-3.jpg",
-                      studyMaterials: "https://examupdates.in/web-programming-notes/"
-                },
-                "2": {
-                      courseName: "Learn Javascript",
-                      courseDuration: "5 Min",
-                      courseDescription: "Easy Javascript sum-up",
-                      courseLink: "https://www.youtube.com/watch?v=c-I5S_zTwAc",
-                      trainerName: "Aaron Jack",
-                      users: "35",
-                      hearts: "42",
-                      courseImg: "assets/img/course-1.jpg",
-                      trainerImg: "assets/img/trainers/trainer-1.jpg",
-                      studyMaterials: "https://examupdates.in/web-programming-notes/"
-                },
+                      courseImg: "assets/img/pythonmini1.jpg",
+                      trainerImg: "assets/img/trainers/trainer-2.jpg",
+                      studyMaterials: "https://www.w3schools.com/python/"
+                }
             }
 
       }
