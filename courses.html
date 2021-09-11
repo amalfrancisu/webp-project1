@@ -72,73 +72,37 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Courses Section ======= -->
-    <section id="courses" class="courses">
-      <div class="container" data-aos="fade-up">
 
 
-        <div class="course-content">
-          <h2>
-            Full Courses
-          </h2>
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-4 col-lg-4"> </div>
+          <div class="col-lg-6 col-lg-6">
+
+            <br>
+            <input type="checkbox" id="webpCheckboxForFullCourses" checked>
+            <label for="webpCheckboxForFullCourses">Full Courses</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="webpCheckboxForShortCourses" checked>
+            <label for="webpCheckboxForShortCourses">Short Courses</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="webpCheckboxForMiniCourses" checked>
+            <label for="webpCheckboxForMiniCourses">Mini Courses</label>
+            &nbsp;
+            <button class="get-started-btn" onclick="webpApplyFilter()">Apply</button>
+
+          </div>
         </div>
-
-
-
-<!----------Start of row-------------->
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-           <div id="fullCoursesAfterThis"></div>
-
-        </div>
-<!----------End of row-------------->
-
-
-
-
-
-    <div class="course-content">
-      <h2>
-        <br><br>
-        Short Courses
-      </h2>
     </div>
 
 
 
 
-<!----------Start of row-------------->
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+    <!-- ======= Courses Section ======= -->
+    <section id="courses" class="courses">
+      <div class="container" data-aos="fade-up">
 
-           <div id="shortCoursesAfterThis"></div>
-
-
-        </div>
-<!----------End of row-------------->
-
-
-<div class="course-content">
-  <h2>
-    <br><br>
-    Mini Courses
-  </h2>
-</div>
-
-
-<!----------Start of row-------------->
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-           <div id="miniCoursesAfterThis"></div>
-
-
-
-        </div>
-<!----------End of row-------------->
-
-
-
-
-
+        <div id="webpGeneratedHtmlCode"></div>
 
       </div>
     </section><!-- End Courses Section -->
@@ -147,7 +111,8 @@
 
   <script src="webp.js"></script>
   <script>
-    webpFillCoursePage();
+    webpApplyFilter();
+    //webpFillCoursePage(true,true,true);
   </script>
 
 
