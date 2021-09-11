@@ -31,7 +31,7 @@ const webpCourses = {
                   "3": {
                         courseName: "HTML TUTORIAL FOR BEGINNERS - FULL COURSE | Web development series by kodegod",
                         courseDuration: "4 Hours",
-                        courseDescription: "Learn HTML 5 in step by step. The full course on html5 is in this one video. This is our first video in the series to learn web development. We are starting with learning common HTML Tags and learning about tools that we are going to use for HTML development. This tutorial is extremely useful to students or professionals. Enjoy the session and share it with all your friends too. This tutorial is to learn HTML5 for beginners. ",
+                        courseDescription: "Learn HTML 5 in step by step. The full course on html5 is in this one video. This is our first video in the series to learn web development. We are starting with learning common HTML Tags and learning about tools that we are going to use for HTML development.",
                         courseLink: "https://www.youtube.com/watch?v=yhASPkhITgQ&ab_channel=kodegod",
                         trainerName: "kodegod",
                         users: "50",
@@ -522,27 +522,55 @@ function webpHtmlForRow(categoryId, courseType) {
 }
 
 
-function webpFillCoursePage() {
+function webpFillCoursePage(includeFullCourses, includeShortCourses, includeMiniCourses) {
 
       let queryString = decodeURIComponent(window.location.search);
       queryString = queryString.substring(1);
       let queries = queryString.split("&");
       let webpCategoryId = queries[0].split("=")[1];
-    
-    
-      let webpCategoryName = "<h2>" + webpCourses[webpCategoryId]["categoryName"] + "</h2>"
+
+
+      let webpCategoryName = '<h2 id="webpCategoryNameHeading">' + webpCourses[webpCategoryId]["categoryName"] + "</h2>";
       let webpFullCourses = webpHtmlForRow(webpCategoryId, "Full Courses");
       let webpShortCourses = webpHtmlForRow(webpCategoryId, "Short Courses");
       let webpMiniCourses = webpHtmlForRow(webpCategoryId, "Mini Courses");
-    
+
+      let htmlForRowDeclaration = '<div class="row" data-aos="zoom-in" data-aos-delay="100">';
+      webpFullCourses = '<div class="course-content"> <h2> Full Courses </h2> </div>' + htmlForRowDeclaration + webpFullCourses + '</div>';
+      webpShortCourses = '<div class="course-content"> <h2> <br><br> Short Courses </h2> </div>' + htmlForRowDeclaration + webpShortCourses + '</div>';
+      webpMiniCourses = '<div class="course-content"> <h2> <br><br> Mini Courses </h2> </div>' + htmlForRowDeclaration + webpMiniCourses + '</div>';
+
+      if(! document.getElementById("webpCategoryNameHeading")) {
       document.getElementById("categoryNameAfterThis").insertAdjacentHTML("afterend", webpCategoryName);
+      }
+      if(includeFullCourses) {
       document.getElementById("fullCoursesAfterThis").insertAdjacentHTML("afterend", webpFullCourses);
+      }
+      if(includeShortCourses) {
       document.getElementById("shortCoursesAfterThis").insertAdjacentHTML("afterend", webpShortCourses);
+      }
+      if(includeMiniCourses) {
       document.getElementById("miniCoursesAfterThis").insertAdjacentHTML("afterend", webpMiniCourses);
-    
+      }
+
     }
-    
+
 function webpRedirectToCoursePage(categoryId) {
-let textField = document.getElementById("formFieldForCategoryId").value = categoryId;
-document.getElementById("formForCategoryId").submit();
+    let textField = document.getElementById("formFieldForCategoryId").value = categoryId;
+    document.getElementById("formForCategoryId").submit();
+}
+
+function webpApplyFilter() {
+    let generatedHtmlCode = document.getElementById("webpGeneratedHtmlCode");
+    while (generatedHtmlCode.firstChild) {
+          generatedHtmlCode.removeChild(generatedHtmlCode.lastChild);
+    }
+    let recoveredNodesHtml = '<div id="fullCoursesAfterThis"></div>' + '<div id="shortCoursesAfterThis"></div>' + '<div id="miniCoursesAfterThis"></div>';
+
+    document.getElementById("webpGeneratedHtmlCode").insertAdjacentHTML("beforeend", recoveredNodesHtml);
+
+    let includeFullCourses = document.getElementById("webpCheckboxForFullCourses").checked;
+    let includeShortCourses = document.getElementById("webpCheckboxForShortCourses").checked;
+    let includeMiniCourses = document.getElementById("webpCheckboxForMiniCourses").checked;
+    webpFillCoursePage(includeFullCourses, includeShortCourses, includeMiniCourses);
 }
