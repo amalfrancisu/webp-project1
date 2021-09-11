@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact</title>
+  <title>About Us</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -15,6 +15,8 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,11 +25,77 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        li {
+    padding: 0.3em;
+}
+
+span {
+    font-weight: 700;
+    color: #102a43;
+    line-height: 35px;
+    line-height: 2.5rem;
+    font-size: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background: #fc4366;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1.3em;
+}
+
+.container1 {
+    width: 460px;
+    margin: 5em auto;
+}
+
+form {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.required-star {
+    color: #fc4366;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 9px 20px;
+    border: 1px solid #e1e2eb;
+    background-color: #fff;
+    color: #102a43;
+    caret-color: #829ab1;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 29px;
+    line-height: 2rem;
+    box-shadow: inset 0 2px 4px 0 rgba(206, 209, 224, 0.2);
+    border-radius: 3px;
+    line-height: 29px;
+    line-height: 2rem;
+}
+
+
+    </style>
+
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -38,10 +106,10 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="courses.html">Courses</a></li>
-          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="signin.html">Sign In</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -50,81 +118,54 @@
       <a href="signin.html" class="get-started-btn">Register</a>
 
     </div>
-  </header><!-- End Header --><!-- End Header -->
+  </header><!-- End Header -->
 
   <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Contact Us</h2>
-        </div>
+        <h2>Help and Support</h2>
+      </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="row mt-5">
+        <div class="row">
+          <!-- <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div> -->
 
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>NITC
-                  Calicut, Kerala
-                  India
-                  </p>
-              </div>
+          <h4>For help and support type in your query with the required details. Our support team will contact you within two days.</h4>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>webcoursera@nitc.ac.in</p>
-              </div>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>9898984989</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="container1">
+            <form>
+                <ul>
+                    <li>
+                        <label for="name"><span>Name <span class="required-star">*</span></span></label>
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                        <label for="mail"><span>Email <span class="required-star">*</span></span></label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li>
+                        <label for="msg"><span>Message</span></label>
+                        <textarea rows="4" cols="50"></textarea>
+                    </li>
+                    <li>
+                        <input type="submit">
+                    </li>
+                </ul>
             </form>
-
-          </div>
+        </div>
 
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End About Section -->
 
   </main><!-- End #main -->
 
@@ -150,21 +191,21 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Categories</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Sign In</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Register</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>More About Us</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.html">Terms</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.html">Help and Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Help and Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
             </ul>
           </div>
 
