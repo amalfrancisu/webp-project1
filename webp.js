@@ -164,7 +164,7 @@ const webpCourses = {
                       trainerName: "Jake Wright",
                       users: "45556",
                       hearts: "35595",
-                      courseImg: "assets/img/cssmini1.png",
+                      courseImg: "assets/img/cssmini1.jpg",
                       trainerImg: "assets/img/trainers/trainer-5.jpg",
                       studyMaterials: "https://websitesetup.org/css3-cheat-sheet/"
                 },
