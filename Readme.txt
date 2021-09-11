@@ -1,7 +1,1 @@
-Thanks for downloading this template!
-Welcome
-
-Template Name: Mentor
-Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Webcoursera is a global online learning platform that offers anyone, anywhere, access to online courses and degrees from leading universities and companies.
