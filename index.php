@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if ($_SESSION['email']==null) {
+        $_SESSION['email']='guest';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,13 +55,31 @@
           <li><a href="contact.html">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
           <li><input type="text" name="search" placeholder="Search "></li>
-          <li><a href="signin.html">Sign In</a></li>
+          
+          <li><a href="">Hello,
+            <?php echo $_SESSION['email']?>
+          </a></li>
+          <!-- <li><a href="#">Setting</a></li> -->
 
-        </ul>
+          <?php if($_SESSION['email']!='guest') : ?>
+            <li><a href="./signin.php?logout=true">Logout</a></li>
+          <?php endif; ?>
+
+
+          <!-- <li><a href="http://localhost/Main%20Page/main login.php?logout=true">Logout</a></li> -->
+      
+          <?php if($_SESSION['email']=='guest') : ?>
+            <li><a href="signin.php">Sign In</a></li>
+          <?php endif; ?>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
+
       </nav><!-- .navbar -->
 
-      <a href="signin.html" class="get-started-btn">Register</a>
+      <?php if($_SESSION['email']=='guest') : ?>
+        <a href="signin.php" class="get-started-btn">Register</a>
+      <?php endif; ?>
+      <!-- <a href="signin.php" class="get-started-btn">Register</a> -->
 
     </div>
   </header><!-- End Header -->
@@ -178,8 +203,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Categories</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Sign In</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Register</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Sign In</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Register</a></li>
             </ul>
           </div>
 
