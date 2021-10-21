@@ -22,7 +22,7 @@ define('URL', 'http://localhost/webp-project1/');
 		$email=mysqli_real_escape_string($conn, $_REQUEST['email']);
 		$password=mysqli_real_escape_string($conn, $_REQUEST['password']);
 		$dob=mysqli_real_escape_string($conn, $_REQUEST['dob']);
-
+		$password = password_hash($password, PASSWORD_DEFAULT);
 
 		$sql = "INSERT INTO student (email,password,name,dob) VALUES('$email','$password','$name','$dob')";
 
@@ -41,16 +41,18 @@ define('URL', 'http://localhost/webp-project1/');
 if (isset($_POST['login'])){     
     $email1=mysqli_real_escape_string($conn,$_REQUEST['email1']);
 	$password1=mysqli_real_escape_string($conn,$_REQUEST['password1']);
-	$_SESSION['email']= $email1;
-	
     $sql="SELECT * FROM `student` WHERE email='$email1'";
     $sql1=mysqli_query($conn,$sql);
     $output=mysqli_fetch_all($sql1,MYSQLI_ASSOC);
-    if(!($sql1)){
+
+    #var_dump($output[0]['password']);
+	if(!($sql1)){
         echo mysqli_error($conn);
     }
-	if(count($output)==1 && (strcmp($output[0]['password'],$password1)==0))
+	#count($output)==1 && (strcmp($output[0]['password'],$password1)==0)
+	if(password_verify($password1, $output[0]['password']) )
 	{
+		$_SESSION['email']= $email1;
 		header('Location: '.URL.'index.php');
 		exit();
     }
