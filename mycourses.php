@@ -2,7 +2,7 @@
 
 define('URL', 'http://localhost/webp-project1/');
 session_start();
-if ($_SESSION['email']==null) {
+if ($_SESSION['email']==null or $_SESSION['email']=='guest') {
 	echo "Permission denied. Please sign in to webcoursera first.";
 	return;
 }
@@ -82,6 +82,10 @@ if ($_SESSION['email']==null) {
 				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->courseImg = $row2['courseimg'];
 				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->trainerImg = $row2['trainerimg'];
 				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->studyMaterials = $row2['studymaterials'];
+				$sql4 = "SELECT * FROM `student-course` WHERE courseid='$courseid'";
+				$result4 = mysqli_query($conn, $sql4);
+				if (!$result4) { echo mysqli_error($conn); }
+				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->users = mysqli_num_rows($result4);
 			}
     }
     $myJSON = json_encode($obj);
@@ -209,8 +213,9 @@ if ($_SESSION['email']==null) {
 
   </main><!-- End #main -->
 
-	<form action="enrollment.php" method="POST" id="formForCategoryId">
-      <input type="hidden" name="categoryId" id = "formFieldForCategoryId" />
+	<form action="enrollment.php" method="POST" id="EformEnrollment">
+      <input type="hidden" name="courseId" id = "EformFieldForCourseId" />
+			<input type="hidden" name="type" id = "EformFieldForType" />
   </form>
 
   <script src="webp.js"></script>
