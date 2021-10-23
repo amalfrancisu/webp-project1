@@ -36,7 +36,7 @@
 
 
   <script src="webp.js"></script>
-  <form action="courses.html" method="GET" id="formForCategoryId">
+  <form action="courses.php" method="GET" id="formForCategoryId">
       <input type="hidden" name="categoryId" id = "formFieldForCategoryId" />
   </form>
   <!-- ======= Header ======= -->
@@ -49,13 +49,14 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="active" href="index.php">All Courses</a></li>
+          <li><a href="myindex.php">My Courses</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="index.html#features">Categories</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
           <li><input type="text" name="search" placeholder="Search "></li>
-          
+
           <li><a href="">Hello,
             <?php echo $_SESSION['email']?>
           </a></li>
@@ -67,12 +68,12 @@
 
 
           <!-- <li><a href="http://localhost/Main%20Page/main login.php?logout=true">Logout</a></li> -->
-      
+
           <?php if($_SESSION['email']=='guest') : ?>
             <li><a href="signin.php">Sign In</a></li>
           <?php endif; ?>
         <i class="bi bi-list mobile-nav-toggle"></i>
-        
+
 
       </nav><!-- .navbar -->
 
