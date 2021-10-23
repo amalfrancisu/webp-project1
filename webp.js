@@ -1,6 +1,11 @@
 
 function webpHtmlForCourse(course, categoryName)
 {
+  let htmlForEnrollment = {
+    "YES" : '<div style="cursor: pointer;" onclick="webpRedirectToEnrollmentPage(' + course['courseId'] + ',-1)"> <h4>Finish Course</h4></div>',
+    "NO" : '<div style="cursor: pointer;" onclick="webpRedirectToEnrollmentPage(' + course['courseId'] + ',1)"> <h4>Enroll</h4></div>'
+  }
+
   let htmlCode = "";
 
   htmlCode +=        '<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">';
@@ -8,7 +13,7 @@ function webpHtmlForCourse(course, categoryName)
   htmlCode +=            '<img src=' + course["courseImg"] + ' class="img-fluid" alt="...">';
   htmlCode +=            '<div class="course-content">';
   htmlCode +=              '<div class="d-flex justify-content-between align-items-center mb-3">';
-  htmlCode +=                '<h4>' + course["enrolled"] + '</h4>';
+  htmlCode +=                htmlForEnrollment[course['enrolled']];
   htmlCode +=                '<p class="price">' + course["courseDuration"] + '</p>';
   htmlCode +=              '</div>';
   htmlCode +=              '<h3><a href=' + course["courseLink"] + '>' + course["courseName"] + '</a></h3>';
@@ -21,8 +26,8 @@ function webpHtmlForCourse(course, categoryName)
   htmlCode +=                '</div>';
   htmlCode +=                '<div class="trainer-rank d-flex align-items-center">';
   htmlCode +=                  '<i class="bx bx-user"></i>&nbsp;' + course["users"];
-  htmlCode +=                  '&nbsp;&nbsp;';
-  htmlCode +=                  '<i class="bx bx-heart"></i>&nbsp;' + course["hearts"];
+  htmlCode +=                  '&nbsp;';
+  //htmlCode +=                  '<i class="bx bx-heart"></i>&nbsp;' + course["hearts"];
   htmlCode +=                '</div>';
   htmlCode +=              '</div>';
   htmlCode +=            '</div>';
@@ -31,6 +36,12 @@ function webpHtmlForCourse(course, categoryName)
 
   return htmlCode;
 
+}
+
+function webpRedirectToEnrollmentPage(courseId,type) {
+    document.getElementById("EformFieldForCourseId").value = courseId;
+    document.getElementById("EformFieldForType").value = type;
+    document.getElementById("EformEnrollment").submit();
 }
 
 //categoryId is "1" for HTML, courseType means "Full Course"...
