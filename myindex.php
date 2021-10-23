@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if ($_SESSION['email']==null) {
+    if ($_SESSION['email']==null or $_SESSION['email']=='guest') {
       echo "Permission denied. Please sign in to webcoursera first.";
       return;
     }
