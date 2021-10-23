@@ -78,6 +78,19 @@ session_start();
 				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->courseImg = $row2['courseimg'];
 				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->trainerImg = $row2['trainerimg'];
 				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->studyMaterials = $row2['studymaterials'];
+				$currentMail = $_SESSION['email'];
+				if ($currentMail!=null and $currentMail!='guest') {
+					$sql3 = "SELECT * FROM `student-course` WHERE email='$currentMail' AND courseid='$courseid'";
+					$result3 = mysqli_query($conn, $sql3);
+					if (!$result3) { echo mysqli_error($conn); }
+					if(mysqli_num_rows($result3) > 0) {
+						$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->enrolled = "YES";
+					}
+				}
+				$sql4 = "SELECT * FROM `student-course` WHERE courseid='$courseid'";
+				$result4 = mysqli_query($conn, $sql4);
+				if (!$result4) { echo mysqli_error($conn); }
+				$obj->{$row2['categoryid']}->{$row2['coursetype']}->{"$ccount"}->users = mysqli_num_rows($result4);
 			}
     }
     $myJSON = json_encode($obj);
@@ -204,6 +217,11 @@ session_start();
     </section><!-- End Courses Section -->
 
   </main><!-- End #main -->
+
+	<form action="enrollment.php" method="POST" id="EformEnrollment">
+      <input type="hidden" name="courseId" id = "EformFieldForCourseId" />
+			<input type="hidden" name="type" id = "EformFieldForType" />
+  </form>
 
   <script src="webp.js"></script>
   <script>
