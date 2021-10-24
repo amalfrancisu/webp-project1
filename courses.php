@@ -7,7 +7,7 @@ session_start();
 #ini_set('display_startup_errors', '1');
 #error_reporting(E_ALL);
 
-  $conn = mysqli_connect('localhost', 'root', '', 'webcoursera1');
+  $conn = mysqli_connect('localhost', 'root', '', 'webcoursera');
 
 		if (!$conn) {
 			echo 'Connection error'.mysqli_connect_error();

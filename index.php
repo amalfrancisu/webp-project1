@@ -17,6 +17,8 @@
   <meta content="" name="keywords">
 
 
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -55,8 +57,11 @@
           <li><a href="index.html#features">Categories</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-          <li><input type="text" name="search" placeholder="Search "></li>
 
+          <form action="search.php" class="form-inline" method="post">
+            <li><input type="text" name="search" placeholder="Search"></li>
+            <li><input type="submit" class="btn btn-primary" style="background-color: black; margin-top: 3px;" name="submit" value="Search"></li>
+          </form>
           <li><a href="">Hello,
             <?php echo $_SESSION['email']?>
           </a></li>

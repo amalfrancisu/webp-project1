@@ -9,7 +9,7 @@
     $courseId = $_POST['courseId'];
     $type = $_POST['type'];
 
-    $conn = mysqli_connect('localhost', 'root', '', 'webcoursera1');
+    $conn = mysqli_connect('localhost', 'root', '', 'webcoursera');
 		if (!$conn) {
 			echo 'Connection error'.mysqli_connect_error();
 		}
