@@ -117,97 +117,41 @@ echo ' Displayed ';
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>“Wisdom is not a product of schooling but of the lifelong attempt to acquire it.”<br> – Albert Einstein</h1>
-      <a href="index.php#features" class="btn-get-started">Get Started</a>
-    </div>
-  </section><!-- End Hero -->
+
+      <!-- ======= Breadcrumbs ======= -->
+      <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Users</h2>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+  <br><br><br>  
 
   <main id="main">
+<div class="col-lg-9 " style="margin: auto;">
+  <table width='70%' cellpadding='5' cellspace='5' class="table table-striped">
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
-      <div class="container">
 
-        <div class="row counters">
+        <tr>
+            <td style="text-align:center"><strong>Name</strong></td>
+            <td style="text-align:center"><strong>Institute</strong></td>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="625412" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Students</p>
-          </div>
+        </tr>
+        <?php while ($row = mysqli_fetch_array($query)) { ?>
+        <tr>
+            <td style="text-align:center"><?php echo $row['name']; ?></td>
+            <td style="text-align:center"><?php echo $row['Institute']; ?></td>
+        </tr>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Courses</p>
-          </div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Categories</p>
-          </div>
+    <?php } ?>
+    </table>
+</div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Trainers</p>
-          </div>
 
-        </div>
 
-      </div>
-    </section><!-- End Counts Section -->
 
     <br><br><br><br>
-    <!-- ======= Categories Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-        <h2> </h1>
-          <div class="section-title">
-            <p>Categories</p>
-          </div>
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-3 col-md-4" onclick="webpRedirectToCoursePage(1)">
-            <div class="icon-box">
-              <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a>HTML</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0" onclick="webpRedirectToCoursePage(2)">
-            <div class="icon-box">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a>CSS</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0" onclick="webpRedirectToCoursePage(3)">
-            <div class="icon-box">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a>JAVASCRIPT</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0" onclick="webpRedirectToCoursePage(4)">
-            <div class="icon-box">
-              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a>JAVA</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4" onclick="webpRedirectToCoursePage(5)">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a>AJAX</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4" onclick="webpRedirectToCoursePage(6)">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a>PYTHON</a></h3>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Categories Section -->
 
 
   </main><!-- End #main -->
@@ -234,8 +178,8 @@ echo ' Displayed ';
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.php">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.php#features">Categories</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Categories</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Sign In</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Register</a></li>
             </ul>
@@ -244,11 +188,11 @@ echo ' Displayed ';
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>More About Us</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.php">Terms</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.php">Privacy Policy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.php">Help and Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.php">About Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.html">Terms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.html">Help and Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
 
@@ -300,24 +244,3 @@ echo ' Displayed ';
 </html>
 
 
-<table width='70%' cellpadding='5' cellspace='5'>
-
-
-<tr>
-    <td><strong>Email</strong></td>
-    <td><strong>Name</strong></td>
-
-</tr>
-<?php while ($row = mysqli_fetch_array($query)) { ?>
-<tr>
-    <td><?php echo $row['email']; ?></td>
-    <td><?php echo $row['name']; ?></td>
-</tr>
-
-
-<?php } ?>
-</table>
-
-<?php
-    header("refresh:10; url=index.php");
-?>
