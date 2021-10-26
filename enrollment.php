@@ -256,8 +256,8 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Categories</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.php">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#features">Categories</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Sign In</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Register</a></li>
             </ul>
@@ -266,11 +266,11 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>More About Us</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.html">Terms</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.html">Help and Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.php">Terms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.php">Privacy Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.php">Help and Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.php">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact Us</a></li>
             </ul>
           </div>
 
