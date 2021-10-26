@@ -154,19 +154,41 @@ session_start();
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-					<li><a href="index.php">All Courses</a></li>
+          <li><a class="active" href="index.php">All Courses</a></li>
           <li><a href="myindex.php">My Courses</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="index.html#features">Categories</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-          <li><input type="text" name="search" placeholder="Search "></li>
-          <li><a href="signin.html">Sign In</a></li>
-        </ul>
+
+          <form action="search.php" class="form-inline" method="post">
+            <li><input type="text" name="search" placeholder="Search"></li>
+            <li><input type="submit" class="btn btn-primary" style="background-color: black; margin-top: 3px;" name="submit" value="Search"></li>
+          </form>
+          <li><a href="">Hello,
+            <?php echo $_SESSION['email']?>
+          </a></li>
+          <!-- <li><a href="#">Setting</a></li> -->
+
+          <?php if($_SESSION['email']!='guest') : ?>
+            <li><a href="./signin.php?logout=true">Logout</a></li>
+          <?php endif; ?>
+
+
+          <!-- <li><a href="http://localhost/Main%20Page/main login.php?logout=true">Logout</a></li> -->
+
+          <?php if($_SESSION['email']=='guest') : ?>
+            <li><a href="signin.php">Sign In</a></li>
+          <?php endif; ?>
         <i class="bi bi-list mobile-nav-toggle"></i>
+
+
       </nav><!-- .navbar -->
 
-      <a href="signin.html" class="get-started-btn">Register</a>
+      <?php if($_SESSION['email']=='guest') : ?>
+        <a href="signin.php" class="get-started-btn">Register</a>
+      <?php endif; ?>
+      <!-- <a href="signin.php" class="get-started-btn">Register</a> -->
 
     </div>
   </header><!-- End Header -->

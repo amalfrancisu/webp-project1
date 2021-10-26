@@ -94,7 +94,7 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>“Wisdom is not a product of schooling but of the lifelong attempt to acquire it.”<br> – Albert Einstein</h1>
-      <a href="index.html#features" class="btn-get-started">Get Started</a>
+      <a href="index.php#features" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
