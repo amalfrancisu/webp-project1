@@ -22,9 +22,10 @@ define('URL', 'http://localhost/webp-project1/');
 		$email=mysqli_real_escape_string($conn, $_REQUEST['email']);
 		$password=mysqli_real_escape_string($conn, $_REQUEST['password']);
 		$dob=mysqli_real_escape_string($conn, $_REQUEST['dob']);
+		$institute=mysqli_real_escape_string($conn, $_REQUEST['institute']);
 		$password = password_hash($password, PASSWORD_DEFAULT);
 
-		$sql = "INSERT INTO student (email,password,name,dob) VALUES('$email','$password','$name','$dob')";
+		$sql = "INSERT INTO student (email,password,name,dob,institute) VALUES('$email','$password','$name','$dob','$institute')";
 
 		
 
@@ -96,6 +97,7 @@ if (isset($_POST['login'])){
 			</div>
 			<input name="password" type="password" placeholder="Password" />
 			<input name="dob" type="date" placeholder="Date Of Birth" />
+			<input name="institute" type="text" placeholder="Institute Name" />
 			<button type="submit" name="create">Sign Up</button>
 		</form>
 	</div>
