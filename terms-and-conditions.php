@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if ($_SESSION['email']==null) {
+        $_SESSION['email']='guest';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,24 +40,24 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Web Coursera</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">Web Coursera</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.php" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html#features">Categories</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="active" href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="index.php#features">Categories</a></li>
+          <li><a href="contact.php">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
           <li><input type="text" name="search" placeholder="Search "></li>
-          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signin.php">Sign In</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="signin.html" class="get-started-btn">Register</a>
+      <a href="signin.php" class="get-started-btn">Register</a>
 
     </div>
   </header><!-- End Header -->
@@ -173,21 +180,21 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Categories</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Sign In</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Register</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.php">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#features">Categories</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Sign In</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="signin.php">Register</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>More About Us</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.html">Terms</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.html">Help and Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.php">Terms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.php">Privacy Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.php">Help and Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.php">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact Us</a></li>
             </ul>
           </div>
 

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if ($_SESSION['email']==null) {
+        $_SESSION['email']='guest';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +11,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Courses</title>
+  <title>Help and Support</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -24,16 +30,74 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Mentor - v4.3.0
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <style>
+        li {
+    padding: 0.3em;
+}
+
+span {
+    font-weight: 700;
+    color: #102a43;
+    line-height: 35px;
+    line-height: 2.5rem;
+    font-size: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background: #fc4366;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1.3em;
+}
+
+.container1 {
+    width: 460px;
+    margin: 5em auto;
+}
+
+form {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.required-star {
+    color: #fc4366;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 9px 20px;
+    border: 1px solid #e1e2eb;
+    background-color: #fff;
+    color: #102a43;
+    caret-color: #829ab1;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 29px;
+    line-height: 2rem;
+    box-shadow: inset 0 2px 4px 0 rgba(206, 209, 224, 0.2);
+    border-radius: 3px;
+    line-height: 29px;
+    line-height: 2rem;
+}
+
+
+    </style>
+
 </head>
 
 <body>
@@ -42,106 +106,77 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Web Coursera</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">Web Coursera</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.php" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.php">All Courses</a></li>
-          <li><a href="myindex.php">My Courses</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html#features">Categories</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="index.php#features">Categories</a></li>
+          <li><a href="contact.php">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-
-          <form action="search.php" class="form-inline" method="post">
-            <li><input type="text" name="search" placeholder="Search"></li>
-            <li><input type="submit" class="btn btn-primary" style="background-color: black; margin-top: 3px;" name="submit" value="Search"></li>
-          </form>
-          <li><a href="">Hello,
-            <?php echo $_SESSION['email']?>
-          </a></li>
-          <!-- <li><a href="#">Setting</a></li> -->
-
-          <?php if($_SESSION['email']!='guest') : ?>
-            <li><a href="./signin.php?logout=true">Logout</a></li>
-          <?php endif; ?>
-
-
-          <!-- <li><a href="http://localhost/Main%20Page/main login.php?logout=true">Logout</a></li> -->
-
-          <?php if($_SESSION['email']=='guest') : ?>
-            <li><a href="signin.php">Sign In</a></li>
-          <?php endif; ?>
+          <li><input type="text" name="search" placeholder="Search "></li>
+          <li><a href="signin.php">Sign In</a></li>
+        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-
-
       </nav><!-- .navbar -->
 
-      <?php if($_SESSION['email']=='guest') : ?>
-        <a href="signin.php" class="get-started-btn">Register</a>
-      <?php endif; ?>
-      <!-- <a href="signin.php" class="get-started-btn">Register</a> -->
+      <a href="signin.php" class="get-started-btn">Register</a>
 
     </div>
   </header><!-- End Header -->
 
-  <main id="main" data-aos="fade-in">
-
+  <main id="main">
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
+    <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <div id="categoryNameAfterThis"></div>
-
+        <h2>Help and Support</h2>
       </div>
     </div><!-- End Breadcrumbs -->
 
-
-
-    <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-4 col-lg-4"> </div>
-          <div class="col-lg-6 col-lg-6">
-
-            <br>
-            <input type="checkbox" id="webpCheckboxForFullCourses" checked>
-            <label for="webpCheckboxForFullCourses">Full Courses</label>
-            &nbsp;&nbsp;
-            <input type="checkbox" id="webpCheckboxForShortCourses" checked>
-            <label for="webpCheckboxForShortCourses">Short Courses</label>
-            &nbsp;&nbsp;
-            <input type="checkbox" id="webpCheckboxForMiniCourses" checked>
-            <label for="webpCheckboxForMiniCourses">Mini Courses</label>
-            &nbsp;
-            <button class="get-started-btn" onclick="webpApplyFilter()">Apply</button>
-
-          </div>
-        </div>
-    </div>
-
-
-
-
-    <!-- ======= Courses Section ======= -->
-    <section id="courses" class="courses">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div id="webpGeneratedHtmlCode"></div>
+        <div class="row">
+          <!-- <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div> -->
+
+          <h4>For help and support type in your query with the required details. Our support team will contact you within two days.</h4>
+
+
+          <div class="container1">
+            <form>
+                <ul>
+                    <li>
+                        <label for="name"><span>Name <span class="required-star">*</span></span></label>
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                        <label for="mail"><span>Email <span class="required-star">*</span></span></label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li>
+                        <label for="msg"><span>Message</span></label>
+                        <textarea rows="4" cols="50"></textarea>
+                    </li>
+                    <li>
+                        <input type="submit">
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        </div>
 
       </div>
-    </section><!-- End Courses Section -->
+    </section><!-- End About Section -->
 
   </main><!-- End #main -->
 
-  <script src="webp.js"></script>
-  <script>
-    webpApplyFilter();
-    //webpFillCoursePage(true,true,true);
-  </script>
-
-
-  <!-- ======= Footer ======= -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -164,21 +199,21 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#features">Categories</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Sign In</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="signin.html">Register</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>More About Us</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms-and-conditions.html">Terms</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="help-and-support.html">Help and Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Help and Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
             </ul>
           </div>
 
