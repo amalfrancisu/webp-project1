@@ -149,8 +149,8 @@ if ($_SESSION['email']==null or $_SESSION['email']=='guest') {
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.php">All Courses</a></li>
-          <li><a href="myindex.php">My Courses</a></li>
+          <li><a href="index.php">All Courses</a></li>
+          <li><a class="active" href="myindex.php">My Courses</a></li>
           <li><a href="about.php">About</a></li>
           <li><a href="index.php#features">Categories</a></li>
           <li><a href="contact.php">Contact</a></li>
