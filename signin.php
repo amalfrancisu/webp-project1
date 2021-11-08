@@ -97,7 +97,7 @@ if (isset($_POST['login'])){
 					document.getElementById('message1').style.color = 'lightcoral';
 				</script>
 			</div>
-			<input type="password" id="password" name="password" pattern="(?=.*\d).{8,}" title="Must contain at least one number and at least 8 or more characters" required />
+			<input type="password" id="password" placeholder="password" name="password" pattern="(?=.*\d).{8,}" title="Must contain at least one number and at least 8 or more characters" required />
 			<input name="dob" type="date" placeholder="Date Of Birth" />
 			<input name="institute" type="text" placeholder="Institute Name" />
 			<button type="submit" name="create">Sign Up</button>
