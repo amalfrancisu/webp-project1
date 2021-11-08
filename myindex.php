@@ -56,7 +56,10 @@
           <li><a href="index.php#features">Categories</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-          <li><input type="text" name="search" placeholder="Search "></li>
+          <form action="search.php" class="form-inline" method="post">
+            <input type="text" name="search" placeholder="Search">
+            <input type="submit" class="btn btn-secondary" style="background-color: #5fcf80; margin-top: 0px;" name="submit" value="Search">
+          </form>
 
           <li><a href="">Hello,
             <?php echo $_SESSION['email']?>
