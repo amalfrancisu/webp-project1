@@ -149,36 +149,6 @@
 
   <main id="main">
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
-      <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="625412" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Students</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Courses</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Categories</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Trainers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
 
     <br><br><br><br>
     <!-- ======= Categories Section ======= -->
