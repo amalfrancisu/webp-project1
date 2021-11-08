@@ -108,8 +108,8 @@
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 
           <form action="search.php" class="form-inline" method="post">
-            <li><input type="text" name="search" placeholder="Search"></li>
-            <li><input type="submit" class="btn btn-primary" style="background-color: black; margin-top: 3px;" name="submit" value="Search"></li>
+            <input type="text" name="search" placeholder="Search">
+            <input type="submit" class="btn btn-secondary" style="background-color: #5fcf80; margin-top: 0px;" name="submit" value="Search">
           </form>
           <li><a href="">Hello,
             <?php echo $_SESSION['email']?>
