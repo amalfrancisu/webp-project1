@@ -70,9 +70,12 @@ if (isset($_POST['login'])){
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="assets/css/signin_style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
+<!-- partial:index.partial.html --><a href="index.php"><i class="fas fa-home" style="float: left;"></i></a>
 <h2>Web Coursera Sign in/up Form</h2>
+
+
 <div class="container" id="container">
+
 	<div class="form-container sign-up-container" id="sign-up">
 		<form action="#" method="post">
 			<h1>Create Account</h1>
@@ -111,7 +114,6 @@ if (isset($_POST['login'])){
 			<span>or use your account</span> -->
 			<input name="email1" type="email" placeholder="Email" />
 			<input name="password1" type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
 			<button type="submit" name="login">Sign In</button>
 		</form>
 	</div>
